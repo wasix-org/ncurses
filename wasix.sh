@@ -38,8 +38,8 @@ export CFLAGS="\
 -g \
 -flto"
 
-./configure --enable-static --disable-shared --host=wasm32-wasi --without-test --without-cxx-binding
+./configure --enable-static --disable-shared --host=wasm32-wasi --without-tests --without-cxx-binding
 
 make -j4
 
-$RANLIB libs/libncurses.a
+$RANLIB lib/libncurses.a
