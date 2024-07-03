@@ -124,7 +124,7 @@ BEGIN {
 	print  ""
 	print  "/* Assume POSIX termio if we have the header and function */"
 	print  "/* #if HAVE_TERMIOS_H && HAVE_TCGETATTR */"
-	print  "#if @HAVE_TERMIOS_H@ && @HAVE_TCGETATTR@"
+	print  "#if @HAVE_TERMIOS_H@ && @HAVE_TCGETATTR@" || defined(__wasm32)
 	print  ""
 	print  "#undef  TERMIOS"
 	print  "#define TERMIOS 1"
